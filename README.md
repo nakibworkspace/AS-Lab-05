@@ -24,7 +24,7 @@ In this lab, we are performing various operations of Feature Engineering using P
 
 Feature engineering is the process of transforming raw data into meaningful features that can be used by machine learning models to improve their predictive accuracy.
 
-![featureeng.drawio.svg](Feature%20Engineering%20with%20Spark%20180d4718bce88094b745e18c05563081/featureeng.drawio.svg)
+![featureeng.drawio.svg](image/image1.svg)
 
 ## Prerequisites:
 
@@ -111,7 +111,7 @@ df2.show()
 
 A pipeline is a series of steps for processing and modeling data, encapsulating all transformations and model training in a structured way. 
 
-![pipeline.drawio.svg](Feature%20Engineering%20with%20Spark%20180d4718bce88094b745e18c05563081/pipeline.drawio.svg)
+![pipeline.drawio.svg](image/image2.svg)
 
 ```python
 df = spark.createDataFrame([
@@ -286,7 +286,7 @@ transformed.show(truncate=False)
 
 Tokenization splits text into individual words or tokens. The `Tokenizer` or `RegexTokenizer` classes from `pyspark.ml.feature` handle tokenization.
 
-![tokenization.drawio.svg](Feature%20Engineering%20with%20Spark%20180d4718bce88094b745e18c05563081/tokenization.drawio.svg)
+![tokenization.drawio.svg](image/image3.svg)
 
 ```python
 data = [(1, "a Fox jumped over FOX"),
@@ -495,7 +495,7 @@ df_scaled.select("user_id", "scaled_features").show(truncate=False)
 
 Combines multiple feature columns into a single vector column, often required for machine learning models in Spark. The `VectorAssembler` class is used for this purpose.
 
-![A pictorial representation of Vector Assembly where the numeric value is converted to vectors](Feature%20Engineering%20with%20Spark%20180d4718bce88094b745e18c05563081/vecassem.drawio.svg)
+![A pictorial representation of Vector Assembly where the numeric value is converted to vectors](image/image4.svg)
 
 A pictorial representation of Vector Assembly where the numeric value is converted to vectors
 
@@ -537,7 +537,7 @@ scaledData.show(truncate=False)
 
 Divides continuous values into discrete buckets or bins. Spark provides the `Bucketizer` class for bucketing. 
 
-![The initial tasks are bucketed and in the buckets after the shuffling operation, the final output is showed.](Feature%20Engineering%20with%20Spark%20180d4718bce88094b745e18c05563081/bucketing.drawio.svg)
+![The initial tasks are bucketed and in the buckets after the shuffling operation, the final output is showed.](image/image5.svg)
 
 The initial tasks are bucketed and in the buckets after the shuffling operation, the final output is showed.
 
@@ -806,7 +806,7 @@ sentences.show(truncate=False)
 +-----+-----------------------+
 ```
 
-![The text values are splitted using `Tokenizer` and then raw_features are generated using `HashingTF`. Finally, the texts are converted using `IDF`](Feature%20Engineering%20with%20Spark%20180d4718bce88094b745e18c05563081/tfidf.drawio.svg)
+![The text values are splitted using `Tokenizer` and then raw_features are generated using `HashingTF`. Finally, the texts are converted using `IDF`](image/image6.svg)
 
 The text values are splitted using `Tokenizer` and then raw_features are generated using `HashingTF`. Finally, the texts are converted using `IDF`
 
